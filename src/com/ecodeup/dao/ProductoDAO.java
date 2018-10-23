@@ -122,6 +122,8 @@ public class ProductoDAO {
 				p.setFechaActualizar(resultSet.getDate(6));
 				listaProductos.add(p);
 			}
+			statement.close();
+			resultSet.close();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -154,6 +156,8 @@ public class ProductoDAO {
 				p.setFechaCrear(resultSet.getDate(5));
 				p.setFechaActualizar(resultSet.getDate(6));
 			}
+			statement.close();
+			resultSet.close();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
